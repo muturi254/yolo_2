@@ -7,6 +7,8 @@ services:
     stdin_open: true
     depends_on:
       - backend
+    networks:
+      - yolom-network
     ports:
       - 3000:3000
     
@@ -17,7 +19,9 @@ services:
       context: ./backend
     stdin_open: true
     depends_on:
-      - mongo_db
+      - mongo
+    networks:
+      - yolom-network
     ports:
       - 5000:5000
     environment:
@@ -27,6 +31,17 @@ services:
     image: mongo
     container_name: mongo_db
     restart: always
+    volumes:
+    - mongo_db:/data/db
+    networks:
+      - yolom-network
     ports:
       - 27017:27017
 
+volumes:
+  mongo_db:
+    driver: local
+
+networks:
+  yolom-networks:
+    driver: bridge
