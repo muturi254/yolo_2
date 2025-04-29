@@ -2,5 +2,11 @@
     "git.ignoreLimitWarning": true,
     "yaml.schemas": {
         "kubernetes://schema/v1%40service": "file:///home/brayo/Desktop/Assignment2/yolo/frontend-deployment.yaml"
+    },
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
     }
 }
