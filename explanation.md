@@ -32,6 +32,7 @@
         - add mongo service:__yet to be created__ as a dependancy
         - expose same ports exposed in the container
         - add stdin_open to allow for comtainer to be open and running
+        - add environment variable for mongo_db_url to shift from container using localhost
 
 
     #step three
@@ -41,6 +42,5 @@
         - add restrt option for the mongodb container to restart incase of chage
         - expose same ports exposed in the container
 
-   
 
 ```
