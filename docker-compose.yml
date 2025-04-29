@@ -1,0 +1,22 @@
+services:
+  frontend:
+    image: ashorta/frontend_1
+    container_name: frontend_1
+    build:
+      context: ./client
+    stdin_open: true
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    
+  backend:
+    image: ashorta/backend_1
+    container_name: backend_1
+    build:
+      context: ./backend
+    stdin_open: true
+    depends_on:
+      - mongo
+    ports:
+      - 5000:5000
