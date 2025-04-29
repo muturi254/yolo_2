@@ -32,4 +32,15 @@
         - add mongo service:__yet to be created__ as a dependancy
         - expose same ports exposed in the container
         - add stdin_open to allow for comtainer to be open and running
+
+
+    #step three
+    > create mongo service
+        - use deployed mongo image from docker hub
+        - use explicit container name with container_name option
+        - add restrt option for the mongodb container to restart incase of chage
+        - expose same ports exposed in the container
+
+   
+
 ```
