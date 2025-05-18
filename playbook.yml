@@ -1,9 +1,44 @@
 ---
 - name: Ansible playbook
-  hosts: localhost
+  hosts: all
   become: true
+
+
+  pre_tasks:
+    - name: Check if Docker is installed
+      command: docker --version
+      ignore_errors: true
+      register: docker_installed
+
+    - name: Install Docker if not installed
+      shell: curl -fsSL https://get.docker.com | sh
+      args:
+        creates: /usr/bin/docker
+      when: docker_installed.failed
+
+    - name: Ensure Docker is running
+      service:
+        name: docker
+        state: started
+        enabled: yes
+      when: docker_installed.failed
+    
+    - name: clone repo
+      git:
+      repo: https://github.com/muturi254/yolo_2.git
+      dest: /home/vagrant/app
+    
+    # - name: copy project to vm
+    #   copy:
+    #     src: ./
+    #     dest: /home/
+    #     owner: vagrant
+    #     group: vagrant
+    #     mode: '0755'
+        
+
   
   roles:
-    # - backend
-    # - frontend
+    - backend
+    - frontend
     - db

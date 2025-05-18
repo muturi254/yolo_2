@@ -1,10 +1,12 @@
-FROM node:14-alpine
+FROM node:13-alpine
+LABEL  maintainer="muturi254"
 
-LABEL maintainer="muturi254"
+# set working directory
 WORKDIR /app
 
 COPY package*.json ./
 
+# install dependancies
 RUN npm install
 
 COPY . .

@@ -1,4 +1,3 @@
-
 - name: Build fontend application
   docker_image:
     name: "{{ image_name }}"        # Docker image name backend_3

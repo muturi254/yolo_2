@@ -8,6 +8,7 @@
       dockerfile: Dockerfile   # Name of the Dockerfile
     state: present
 
+
 - name: Ensures The backend container is running
   docker_container:
     name: "{{ container_name }}"
