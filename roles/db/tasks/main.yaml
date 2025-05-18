@@ -10,7 +10,7 @@
     name: app-mongo
     image: mongo
     ports:
-      - '27018:27017'
+      - '27017:27017'
     volumes:
       - ./app-mongo-data:/data/db
     networks:
