@@ -14,6 +14,7 @@
     - use community.docker.image to build image and add necessary args
     - spin off container from build image
     - create envinment variables for this role
+    - add backend container to the same network as the Db to allow for communication
 
 - Create frontend role for contenerizing frontend 
     - use community.docker.image to build image and add necessary args
