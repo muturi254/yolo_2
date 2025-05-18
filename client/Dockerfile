@@ -1,16 +1,14 @@
 FROM node:13-alpine
-LABEL  maintainer="muturi254"
 
-# set working directory
+LABEL maintainer="muturi254"
 WORKDIR /app
 
 COPY package*.json ./
 
-# install dependancies
 RUN npm install
 
 COPY . .
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]

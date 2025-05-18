@@ -1,4 +1,4 @@
-frontend_path: "{{ playbook_dir }}/client/"
+frontend_path: "app/client/"
 image_name: ashorta/frontend1
 image_tag: latest
 container_name: frontend_3

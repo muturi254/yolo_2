@@ -25,8 +25,8 @@
     
     - name: clone repo
       git:
-      repo: https://github.com/muturi254/yolo_2.git
-      dest: /home/vagrant/app
+        repo: https://github.com/muturi254/yolo_2.git
+        dest: /home/vagrant/app
     
     # - name: copy project to vm
     #   copy:
