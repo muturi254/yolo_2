@@ -1,0 +1,21 @@
+
+- name: Build fontend application
+  docker_image:
+    name: "{{ image_name }}"        # Docker image name backend_3
+    tag: "{{ image_tag }}"          # Docker image name
+    source: build              # Docker image tag
+    build:
+      path: "{{ frontend_path }}"  # Path to the Flask app directory
+      dockerfile: Dockerfile   # Name of the Dockerfile
+    state: present
+
+
+- name: Ensures The frentend  container is running
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    ports:
+      - "3000:3000"
+    command: "npm start"
+

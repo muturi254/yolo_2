@@ -1,0 +1,20 @@
+---
+- name: create yolom networks
+  docker_network:
+    name: yolom-network
+    state: present
+
+
+- name: Run MongoDB Container
+  docker_container:
+    name: app-mongo
+    image: mongo
+    ports:
+      - '27018:27017'
+    volumes:
+      - ./app-mongo-data:/data/db
+    networks:
+      - name: yolom-network
+  tags:
+    - database
+    - backend

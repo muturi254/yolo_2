@@ -1,0 +1,4 @@
+backend_path: "{{ playbook_dir }}/backend/"
+image_name: ashorta/backend1
+image_tag: latest
+container_name: backend_3
