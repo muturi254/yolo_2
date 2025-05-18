@@ -43,5 +43,5 @@ volumes:
     driver: local
 
 networks:
-  yolom-networks:
+  yolom-network:
     driver: bridge
