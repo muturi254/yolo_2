@@ -1,7 +1,6 @@
 ---
 - name: Ansible playbook
-  hosts: localhost
-  connection: local
+  hosts: all
   become: true
 
 

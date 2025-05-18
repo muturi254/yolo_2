@@ -15,7 +15,9 @@
     image: "{{ image_name }}"
     state: started
     ports:
-      - "5001:5001"
+      - "5000:5000"
     command: "npm start"
+    networks:
+      - name: yolom-network
     env:
-      MONGODB_URI: mongodb://mongo:27017/
+      MONGODB_URI: "mongodb://app-mongo:27017/"
