@@ -1,4 +1,5 @@
-backend_path: "app/backend/"
+backend_path: "{{ playbook_dir }}/backend/"
+# backend_path: "app/backend/"
 image_name: ashorta/backend1
 image_tag: latest
 container_name: backend_3

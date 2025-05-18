@@ -15,7 +15,7 @@
     image: "{{ image_name }}"
     state: started
     ports:
-      - "5000:5000"
+      - "5001:5001"
     command: "npm start"
     env:
       MONGODB_URI: mongodb://mongo:27017/
