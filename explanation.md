@@ -3,4 +3,8 @@
 ```
 - Generate Varant file with vagrant init geerlingguy/ubuntu2004
 - Add  instruction to allow playbook.yml to be run by ansible.
+- Create ansible.cfg to set up vm access variables
+    - inventory
+    - remote user
+    - private key
 ```

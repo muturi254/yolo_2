@@ -1,0 +1,8 @@
+---
+- name: Ansible playbook
+  hosts: all
+
+
+  tasks:
+  - name: Run a simple helo world
+    shell: echo "hello world"
