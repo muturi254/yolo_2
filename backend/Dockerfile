@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14
 
 LABEL maintainer="muturi254"
 WORKDIR /app
