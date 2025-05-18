@@ -10,7 +10,24 @@
 ```
 2. create roles folder for the different roles i.e backend, fronend, db.
 ```
-- Create bckend role for contenerizing backend role
+- Create backend role for contenerizing backend role
     - use community.docker.image to build image and add necessary args
     - spin off container from build image
+    - create envinment variables for this role
+
+- Create frontend role for contenerizing frontend 
+    - use community.docker.image to build image and add necessary args
+    - spin off container from build image
+
+- Create mongo role for contenerizing mongo db
+    - create the network that the container will use
+    - use community.docker.image to build image and add necessary args
+    - spin off container from build image
+```
+3. playbook yaml for ansible
+```
+    - create pre-task to check if docker is installed
+    - if docker is not available install docker
+    - clone project from github into virtual machine
+    - run roles in virtual machine to create the different containers
 ```

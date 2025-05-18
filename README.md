@@ -1,15 +1,17 @@
----
-# - name: Download frontend image
-#   community.docker.docker_image:
-#     name: "{{ image_name }}"
-#     tag: "{{ image_tag}}"
-#     build:
-#       path: "{{ fronted_path }}"
+# E-commerce 
+## Setup
+```
+# clone the repo
+$ git clone <repo link>
 
-# - name: Ensures The container is running
-#   community.docker.docker_container:
-#     name: "{{ frontend_1 }}"
-#     image: "{{ image_name }}"
-#     state: started
-#     ports:
-      # - "5000": "5000"
+#change directory to the repo
+$ cd <repo name>
+
+set up Vm with vagrant
+$ vagrant up
+$ ansible-playbook playbook.yml
+
+# Alternatively you could runn the following
+$ vagrant provision
+
+```
